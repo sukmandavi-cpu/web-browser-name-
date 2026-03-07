@@ -1,0 +1,105 @@
+<html>
+    <head>
+       <meta Name="viewport"
+       content="width=device-width,
+       inital-scale=1.0">
+
+       <title>Bastar Bachao Abhiyan</title>
+
+       <style>
+
+        body{
+            font-family:arial;
+            text-align:center;
+        }
+
+        button{
+            padding:12px 25px;
+            font-size:18px;
+            background:green;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        /* popup form b0x*/
+        .popup-content{
+            background:white;
+            width:90%;
+            max-width:350px;
+            margin:20px;
+            padding:20px;
+            border-radius:10px;
+        }
+        input,textarea{
+            width:100%;
+            padding:8px;
+            margin:5px 0;
+        }
+
+       </style>
+
+       <script>
+
+        function openForm(){
+            document.getElementById("popup").style.display="block";
+        }
+
+        function closeForm(){
+            document.getElementById("popup").style.display="none";
+        }
+
+        function sendWhatsApp(){
+            var name=document.getElementById("name").value;
+            var
+            mobile=document.getElementById("mobile").value;
+            var
+            message=document.getElementById("massage").value;
+
+
+            var url="https://Wa.me/91xxxxxxxxxx?text="
+            +"नाम: "+name+"%0a"
+            +"मोबाइल: "+mobile+"%0a"
+            +"संदेश: "+message;
+            window.open(url);
+
+        }
+
+       </script>
+    </head>
+    <body>
+        <h1>बस्तर बचाओ अभियान</h1>
+        <img src="kunjam.jpg" width="300">
+
+        <br><br>
+
+
+        <button onclick="openForm()">अभियान से जुड़े
+        </button>
+
+        <!--popup form-->
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h3>अभियान से जुड़े</h3>
+
+                <input id="name" type="text" placeholder="नाम">
+
+                <input id="mobile" type="tel"
+                placeholder="मोबाइल नंबर">
+
+
+                <textarea id="message" placeholder="संदेश"></textarea>
+
+                <br><br>
+
+                <button onclick="sendWhatsApp()">submit
+                </button>
+
+                <br><br>
+
+                <button onclick="closeForm()">Close</button>
+            </div>
+        </div>
+    </body>
+</html>
